@@ -7,11 +7,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use(require('./controllers/authorsController.js'));
-app.use(require('./controllers/booksController.js'));
+app.use(require('./controllers/book.js'));
+// app.use(require('./controllers/authorController.js'));
 // app.use(require('./controllers/notesController.js'));
 
-db.sequelize.sync({ force: true }).then(function(){
+db.sequelize.sync({ force: false }).then(function(){
   app.listen(PORT, () => {
     console.log(`App listening on PORT: ${PORT}`)
   });
