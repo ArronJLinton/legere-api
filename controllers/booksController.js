@@ -10,16 +10,16 @@ router.get('/api/books', (req, res) => {
   .catch(error => res.status(500).json(error))
 });
 
-router.get('/api/book/:id', (req, res) => {
-  db.Book.findAll({
-    where: {
-      id: req.params.id
-    },
-    include: [db.Note]
-  })
-  .then((response) => res.status(200).json(response))
-  .catch(error => res.status(500).json(error))
-});
+// router.get('/api/book/:id', (req, res) => {
+//   db.Book.findAll({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [db.Note]
+//   })
+//   .then((response) => res.status(200).json(response))
+//   .catch(error => res.status(500).json(error))
+// });
 
 router.post('/api/book', (req, res) => {
   /*
