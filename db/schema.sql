@@ -1,3 +1,5 @@
+CREATE DATABASE library_db;
+
 CREATE TABLE IF NOT EXISTS `Authors` (
   `id` INTEGER NOT NULL auto_increment , 
   `firstName` VARCHAR(255), 
