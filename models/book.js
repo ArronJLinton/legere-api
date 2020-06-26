@@ -19,9 +19,10 @@ module.exports = function(sequelize, DataTypes) {
       }
     })
 
-    Book.hasMany(models.Note, {
+    Book.hasMany(models.Chapter, {
       onDelete: "cascade"
     })
+    
   }
   return Book;
 };
