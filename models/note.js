@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
   })
 
   Note.associate = function(models){
-    Note.belongsTo(models.Book, {
+    Note.belongsTo(models.Chapter, {
       // this will create a column called AuthorId
       foreignKey: {
         allowNull: false
